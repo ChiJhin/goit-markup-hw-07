@@ -740,7 +740,7 @@ body {
 }
 
 .close-icon {
-    
+    transition: fill var(--tr-du) var(--timing);
     fill: #000000;
 }
 .close-button:hover .close-icon,
@@ -782,6 +782,7 @@ body {
     border-radius: 4px;
     outline: none;
     padding: 12px 12px 12px 42px;
+    transition: border-color var(--tr-du) var(--timing);
     
 }
 .form-input:focus-within {
@@ -801,6 +802,7 @@ body {
     font-size: 12px;
     line-height: 1.15;
     letter-spacing: 0.01em;
+    transition: border-color var(--tr-du) var(--timing);
 
 }
 .form-textarea:focus-within {
@@ -816,6 +818,7 @@ body {
     top: 50%;
     left: 15px;
     transform: translateY(-50%);
+    transition: fill var(--tr-du) var(--timing);
 }
 .form-checkbox {
     
@@ -844,6 +847,11 @@ body {
     border-radius: 2px;
     margin-right: 8px;
 }
+
+.checkbox:focus ~ .custom-checkbox {
+    border-color: var(--sub-bg-color);
+}
+
 .checkbox:checked ~ .custom-checkbox {
     background-color: var(--sub-bg-color);
     background-image: url("../images/icon_check.svg");
