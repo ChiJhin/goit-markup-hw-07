@@ -1,0 +1,93 @@
+.header {
+    border-bottom: 1px solid #ECECEC;
+
+    &__container {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        margin-right: 93px;
+        
+        &--wrap {
+            color: var(--sub-bg-color);
+        }
+    }
+}
+.site-nav {
+
+    &__list {
+        display: flex;
+
+        &--contact {
+            justify-content: flex-end;
+            flex-grow: 1;
+         }
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 50px;
+    }
+
+    &__item--contact:first-child {
+        margin-right: 30px;
+    }
+
+    &__link {
+        transition: color var(--tr-du) var(--timing);
+        display: block;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+        color: #212121;
+
+        &:hover,
+        &:focus {
+            color: var(--sub-bg-color);
+        }
+
+        &--current {
+            position: relative;
+            transition: color var(--tr-du) var(--timing);
+            color: var(--sub-bg-color);
+
+            &:hover,
+            &:focus {
+                color: var(--light-blue-color);
+            }
+
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                transform: translateY(1px);
+                width: 100%;
+                height: 4px;
+                background-color: var(--sub-bg-color);
+                border-radius: 2px;
+            }
+        }
+
+        &--contact {
+            display: flex;
+            align-items: center;
+            color: var(--sub-text-color);
+
+            &:hover .contact-icon,
+            &:focus .contact-icon {
+                fill:currentColor;
+            }
+        }
+    }
+}
+
+.contact-icon {
+    transition: fill var(--tr-du) var(--timing);
+    margin-right: 10px;
+
+    fill: currentColor;
+}

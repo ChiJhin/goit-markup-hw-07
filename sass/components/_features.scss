@@ -1,0 +1,35 @@
+.features {
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        width: 270px;
+
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 10px;
+    }
+
+    &__label {
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 1.71;
+        color: var(--sub-text-color);
+    }
+
+    &__thumb {
+        height: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        background-color: #F5F4FA;
+    
+    }
+}

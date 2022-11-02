@@ -1,0 +1,72 @@
+
+.social {
+
+    &__list {
+        display: flex;
+        gap: 10px;
+    } 
+
+    &__link {
+        transition: background-color var(--tr-du) var(--timing);
+        display: flex;
+        border-radius: 50%;
+        width: 44px;
+        height: 44px;
+        align-items: center;
+        justify-content: center;
+
+        &:hover,
+        &:focus {
+            background-color: var(--sub-bg-color);
+
+             .social__icon--team,
+             .social__icon--team {
+                fill: var(--special-text-color);
+            }
+        }
+
+        &--footer {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    }
+
+    &__icon {
+        fill: var(--special-text-color) ;
+
+        &--team {
+            transition: fill var(--tr-du) var(--timing);
+            fill: var(--icon-color);
+        }
+        &--footer {
+            margin: 0 0 0 10px;
+        }
+    }
+
+    &__subtitle {
+        color: var(--special-text-color);
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    &__form {
+        display: flex;
+    }
+
+    &__email {
+        width: 358px;
+        padding-left: 16px;
+        margin-right: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+        color: rgba(255, 255, 255, 0.6);
+        background-color: transparent;
+        
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        padding: 10px 28px;
+    
+    }
+}
