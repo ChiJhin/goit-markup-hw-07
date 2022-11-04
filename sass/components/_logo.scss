@@ -4,4 +4,13 @@
     font-weight: 700;
     font-size: 26px;
     line-height: 1.2;
+
+    &--wrap {
+        margin-right: 93px;
+    }
+    &--footer {
+        color: var(--sub-bg-color);
+    }
+    
 }
+

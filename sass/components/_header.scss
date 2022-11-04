@@ -7,22 +7,53 @@
     }
 
     &__logo {
-        margin-right: 93px;
         
-        &--wrap {
-            color: var(--sub-bg-color);
-        }
+        color: var(--sub-bg-color);
+        
+        
+    }
+    &__list {
+        display: flex;
+        flex-grow: 1;
+        justify-content: flex-end;
+    
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 30px;
+
+    }
+
+    &__link {
+            display: flex;
+            align-items: center;
+            color: var(--sub-text-color);
+            transition: color var(--tr-du) var(--timing);
+
+            &:hover,
+            &:focus {
+                color: var(--sub-bg-color);
+            }
+
+
+            &:hover .contact-icon,
+            &:focus .contact-icon {
+                fill:currentColor;
+            }
+    }
+
+    &__icon {
+        transition: fill var(--tr-du) var(--timing);
+        margin-right: 10px;
+        fill: currentColor;
     }
 }
-.site-nav {
+.nav {
+
+    display: flex;
 
     &__list {
         display: flex;
-
-        &--contact {
-            justify-content: flex-end;
-            flex-grow: 1;
-         }
     }
 
     &__item:not(:last-child) {
@@ -35,13 +66,7 @@
 
     &__link {
         transition: color var(--tr-du) var(--timing);
-        display: block;
-        padding-top: 32px;
-        padding-bottom: 32px;
-        font-weight: 500;
-        line-height: 1.2;
-        letter-spacing: 0.02em;
-        color: #212121;
+        
 
         &:hover,
         &:focus {
@@ -72,22 +97,8 @@
             }
         }
 
-        &--contact {
-            display: flex;
-            align-items: center;
-            color: var(--sub-text-color);
-
-            &:hover .contact-icon,
-            &:focus .contact-icon {
-                fill:currentColor;
-            }
+        
         }
     }
-}
 
-.contact-icon {
-    transition: fill var(--tr-du) var(--timing);
-    margin-right: 10px;
 
-    fill: currentColor;
-}

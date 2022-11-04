@@ -13,6 +13,13 @@
         &:hover,
         &:focus {
             background-color: var(--light-blue-color);
+        
+        }
+
+        &--modal {
+            width: 200px;
+            margin: 0 auto;
+            padding: 10px 52px;
         }
 }
 
